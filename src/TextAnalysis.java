@@ -1,4 +1,4 @@
-// Import classes that can
+// Import classes that can help analyze text files
 import java.util.Locale;
 import java.util.Scanner;
 import java.io.File;
@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 
+//This class will analyze text
 public class TextAnalysis {
     private static ArrayList<Article> articles;
     private static final ArrayList<String> biasedWords = new ArrayList<String>(Arrays.asList("Democratic"
