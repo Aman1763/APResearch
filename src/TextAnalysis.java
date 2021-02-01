@@ -22,10 +22,6 @@ public class TextAnalysis {
     }
 
     //Initialize all the articles
-    public static void initialize(){
-        articles.add(new Article("C:\\Users\\amanm\\Desktop\\AP Research\\File1.txt", 2001));
-        articles.add(new Article("C:\\Users\\amanm\\Desktop\\AP Research\\File2.txt", 2001));
-    }
 
     public static void loopArticles(){
         for(int i = 0; i < articles.size(); i++){
@@ -61,4 +57,33 @@ public class TextAnalysis {
         String[] words = word.replaceAll("[^a-zA-Z ]", "").toLowerCase().split("\\s+");
         return words[0];
     }
+
+    public static void initialize(){
+        articles.add(new Article("C:\\Users\\amanm\\Desktop\\AP Research\\File1.txt", 2001));
+        articles.add(new Article("C:\\Users\\amanm\\Desktop\\AP Research\\File2.txt", 2001));
+        articles.add(new Article("C:\\Users\\amanm\\Desktop\\AP Research\\File3.txt", 2001));
+        articles.add(new Article("C:\\Users\\amanm\\Desktop\\AP Research\\File4.txt", 2001));
+        articles.add(new Article("C:\\Users\\amanm\\Desktop\\AP Research\\File5.txt", 2001));
+        articles.add(new Article("C:\\Users\\amanm\\Desktop\\AP Research\\File6.txt", 2001));
+        articles.add(new Article("C:\\Users\\amanm\\Desktop\\AP Research\\File7.txt", 2001));
+        articles.add(new Article("C:\\Users\\amanm\\Desktop\\AP Research\\File8.txt", 2001));
+        articles.add(new Article("C:\\Users\\amanm\\Desktop\\AP Research\\File9.txt", 2001));
+        articles.add(new Article("C:\\Users\\amanm\\Desktop\\AP Research\\File10.txt", 2001));
+        articles.add(new Article("C:\\Users\\amanm\\Desktop\\AP Research\\File11.txt", 2001));
+        articles.add(new Article("C:\\Users\\amanm\\Desktop\\AP Research\\File12.txt", 2001));
+        articles.add(new Article("C:\\Users\\amanm\\Desktop\\AP Research\\File13.txt", 2001));
+        articles.add(new Article("C:\\Users\\amanm\\Desktop\\AP Research\\File14.txt", 2001));
+        articles.add(new Article("C:\\Users\\amanm\\Desktop\\AP Research\\File15.txt", 2001));
+        articles.add(new Article("C:\\Users\\amanm\\Desktop\\AP Research\\File16.txt", 2001));
+        articles.add(new Article("C:\\Users\\amanm\\Desktop\\AP Research\\File17.txt", 2001));
+        articles.add(new Article("C:\\Users\\amanm\\Desktop\\AP Research\\File18.txt", 2001));
+        articles.add(new Article("C:\\Users\\amanm\\Desktop\\AP Research\\File19.txt", 2001));
+        articles.add(new Article("C:\\Users\\amanm\\Desktop\\AP Research\\File20.txt", 2001));
+        articles.add(new Article("C:\\Users\\amanm\\Desktop\\AP Research\\File21.txt", 2001));
+        articles.add(new Article("C:\\Users\\amanm\\Desktop\\AP Research\\File22.txt", 2001));
+        articles.add(new Article("C:\\Users\\amanm\\Desktop\\AP Research\\File23.txt", 2001));
+        articles.add(new Article("C:\\Users\\amanm\\Desktop\\AP Research\\File24.txt", 2001));
+
+    }
+
 }
