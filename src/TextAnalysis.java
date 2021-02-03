@@ -12,12 +12,14 @@ public class TextAnalysis {
     private static ArrayList<Article> articles;
     private static final ArrayList<String> biasedWords = new ArrayList<String>(Arrays.asList("Democratic"
     , "bad", "personally", "illegal", "woman", "single", "rich", "corruption", "administration", "americans", "conservative", "doubt", "torture",
-    "doing"));
+    "doing", "illegal","stop", "tax", "claimed", "human", "doesnt", "difficult", "democrats", "less", "pass", "bad", "sure", "blame", "theyre", "happen", "death",
+            "actually", "exactly", "wrong", "corporation", "wealthy", "politics", "Xenophobia" ));
 
     public static void main(String[] args){
         articles = new ArrayList<Article> ();
         initialize();
         loopArticles();
+        printPercentages();
 
     }
 
@@ -38,6 +40,7 @@ public class TextAnalysis {
                 e.printStackTrace();
             }
             System.out.println(articles.get(i).getBiasScore());
+            System.out.println(articles.get(i).getTotalWords());
             System.out.println();
         }
     }
@@ -51,12 +54,20 @@ public class TextAnalysis {
                     System.out.println("Word that is biased: " + currentWord);
                 }
             }
+            currentArticle.incrementWords();
         }
     }
 
     public static String extractWord(String word){
         String[] words = word.replaceAll("[^a-zA-Z ]", "").toLowerCase().split("\\s+");
         return words[0];
+    }
+
+    public static void printPercentages(){
+        for(int i = 0; i < articles.size(); i++){
+            double percent = (( (double) articles.get(i).getBiasScore()) / ( (double)articles.get(i).getTotalWords())) * 100;
+            System.out.println("ARTICLE " + i + " Percent: " + percent);
+        }
     }
 
     public static void initialize(){
@@ -85,30 +96,30 @@ public class TextAnalysis {
         articles.add(new Article("C:\\Users\\amanm\\Desktop\\AP Research\\File23.txt", 2000));
         articles.add(new Article("C:\\Users\\amanm\\Desktop\\AP Research\\File24.txt", 2000));
 
-        articles.add(new Article("D:\\2001\\File25.txt", 2000));
-        articles.add(new Article("D:\\2001\\File26.txt", 2000));
-        articles.add(new Article("D:\\2001\\File27.txt", 2000));
-        articles.add(new Article("D:\\2001\\File28.txt", 2000));
-        articles.add(new Article("D:\\2001\\File29.txt", 2000));
-        articles.add(new Article("D:\\2001\\File30.txt", 2000));
-        articles.add(new Article("D:\\2001\\File31.txt", 2000));
-        articles.add(new Article("D:\\2001\\File32.txt", 2000));
-        articles.add(new Article("D:\\2001\\File33.txt", 2000));
-        articles.add(new Article("D:\\2001\\File34.txt", 2000));
-        articles.add(new Article("D:\\2001\\File35.txt", 2000));
-        articles.add(new Article("D:\\2001\\File36.txt", 2000));
-        articles.add(new Article("D:\\2001\\File37.txt", 2000));
-        articles.add(new Article("D:\\2001\\File38.txt", 2000));
-        articles.add(new Article("D:\\2001\\File39.txt", 2000));
-        articles.add(new Article("D:\\2001\\File40.txt", 2000));
-        articles.add(new Article("D:\\2001\\File41.txt", 2000));
-        articles.add(new Article("D:\\2001\\File42.txt", 2000));
-        articles.add(new Article("D:\\2001\\File43.txt", 2000));
-        articles.add(new Article("D:\\2001\\File44.txt", 2000));
-        articles.add(new Article("D:\\2001\\File45.txt", 2000));
-        articles.add(new Article("D:\\2001\\File46.txt", 2000));
-        articles.add(new Article("D:\\2001\\File47.txt", 2000));
-        articles.add(new Article("D:\\2001\\File48.txt", 2000));
+        articles.add(new Article("D:\\2001\\File25.txt", 2001));
+        articles.add(new Article("D:\\2001\\File26.txt", 2001));
+        articles.add(new Article("D:\\2001\\File27.txt", 2001));
+        articles.add(new Article("D:\\2001\\File28.txt", 2001));
+        articles.add(new Article("D:\\2001\\File29.txt", 2001));
+        articles.add(new Article("D:\\2001\\File30.txt", 2001));
+        articles.add(new Article("D:\\2001\\File31.txt", 2001));
+        articles.add(new Article("D:\\2001\\File32.txt", 2001));
+        articles.add(new Article("D:\\2001\\File33.txt", 2001));
+        articles.add(new Article("D:\\2001\\File34.txt", 2001));
+        articles.add(new Article("D:\\2001\\File35.txt", 2001));
+        articles.add(new Article("D:\\2001\\File36.txt", 2001));
+        articles.add(new Article("D:\\2001\\File37.txt", 2001));
+        articles.add(new Article("D:\\2001\\File38.txt", 2001));
+        articles.add(new Article("D:\\2001\\File39.txt", 2001));
+        articles.add(new Article("D:\\2001\\File40.txt", 2001));
+        articles.add(new Article("D:\\2001\\File41.txt", 2001));
+        articles.add(new Article("D:\\2001\\File42.txt", 2001));
+        articles.add(new Article("D:\\2001\\File43.txt", 2001));
+        articles.add(new Article("D:\\2001\\File44.txt", 2001));
+        articles.add(new Article("D:\\2001\\File45.txt", 2001));
+        articles.add(new Article("D:\\2001\\File46.txt", 2001));
+        articles.add(new Article("D:\\2001\\File47.txt", 2001));
+        articles.add(new Article("D:\\2001\\File48.txt", 2001));
 
         articles.add(new Article("D:\\2002\\File49.txt", 2002));
         articles.add(new Article("D:\\2002\\File50.txt", 2002));
